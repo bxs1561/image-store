@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ImageStore</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+
+</head>
+
+<body>
+<div class="ui container" id="main-content">
+
+  <%= render 'layouts/top_nav_bar' %>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <%= yield %>
+</div>
+</body>
+<br/>
+<br/>
+<br/>
+<br/>
+<%= render 'layouts/footer' %>
+</html>
