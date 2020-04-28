@@ -26,6 +26,7 @@ gem 'devise_token_auth'
 gem 'figaro'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'active_model_serializers'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

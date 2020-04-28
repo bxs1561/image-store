@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_27_235314) do
+ActiveRecord::Schema.define(version: 2020_04_28_213902) do
+
+  create_table "store_images", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.binary "image"
+    t.datetime "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
