@@ -15,6 +15,8 @@ class ApplicationController < ActionController::Base
                 end
         private
                 def allowed_use_params
-                        %i[first_name last_name]
+                        # %i[first_name last_name]
+                        %i[name]
+
                 end
 end

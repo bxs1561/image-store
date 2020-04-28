@@ -1,19 +1,20 @@
 <!--<div class="ui very centered padded text container segment">-->
 <div class="ui very padded text container segment">
+  <!--  <div class="ui placeholder segment">-->
 
   <h2>Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'ui form'}) do |f| %>
     <%= render 'devise/shared/login_error_messages', resource: resource %>
-    <div class="field">
+    <div class="eight wide column required field">
       <%= f.label :email %>
       <div class="ui left icon input">
         <i class="user alternate icon"></i>
-        <%= f.email_field :email, autofocus: true, autocomplete: "off", required: true %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "off", required: true, placeholder: "Email" %>
       </div>
     </div>
 
-    <div class="field">
+    <div class="eight wide column required field">
       <%= f.label :password %>
       <div class="ui left icon input">
         <i class="key icon"></i>
@@ -36,13 +37,25 @@
   <% end %>
 
   <%= render "devise/shared/links" %>
-
+  <div class="ui horizontal divider">
+    Or
+  </div>
+  <p>Login with your social media account</p>
   <%#= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class: 'ui google plus button' %>
   <a href="<%= user_google_oauth2_omniauth_authorize_path %>">
-    <button class="fluid ui google red button",>
+    <!--    <button class="fluid ui google red button",>-->
+    <button class="ui google red button" ,>
       <i class="google icon"></i>
       Conect with Google
     </button>
   </a>
-
+  <%#= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+  <a href="<%= user_facebook_omniauth_authorize_path %>">
+    <button class="ui facebook button">
+      <i class="facebook icon"></i>
+      Facebook
+    </button>
+  </a>
 </div>
+
+
