@@ -1,0 +1,44 @@
+<div class="ui very centered padded text container segment">
+  <h2>New Image</h2>
+  <form class="ui form" <%= form_for @images,html: { multipart: true } do |form|%>
+    <%#= form_for( url: store_image_path(resource_name), html: {class: 'ui form'}) do |form| %>
+
+    <div class="eight wide required field ">
+        <%= form.label :first_name%>
+          <%= form.text_field :first_name,autocomplete: "off", require: false, autofocus: true %>
+        </div>
+
+    <div class="eight wide required field ">
+      <%#= form.text_field :last_name, :last_name=>"last name"%>
+      <%= form.label :last_name %>
+        <%= form.text_field :last_name,autocomplete: "off", require: false, autofocus: true %>
+      </div>
+
+    <div class="eight wide required field ">
+      <%= form.label :category%>
+      <%= form.text_field :category,autocomplete: "off", require: false, autofocus: true %>
+    </div>
+    <div class="eight wide required field ">
+      <%= form.label :image%>
+      <%= form.file_field :image,autocomplete: "off", require: false, autofocus: true %>
+    </div>
+    <div class="eight wide required field ">
+      <%= form.label :date%>
+      <%= form.datetime_field :date,autocomplete: "off", require: false, autofocus: true %>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="actions" id="center-button">
+      <%= form.submit "save", class: 'ui primary button' %>
+    </div><%end%>
+  </form>
+</div>

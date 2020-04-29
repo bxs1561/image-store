@@ -9,6 +9,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  #create data and attributes in api
+  # ActiveModelSerializers.config.adapter= :json_api
+
   # Show full error reports.
   config.consider_all_requests_local = true
 

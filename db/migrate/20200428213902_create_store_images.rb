@@ -5,7 +5,7 @@ class CreateStoreImages < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.binary :image
       t.datetime :date
-
+      t.string :category
       t.timestamps
     end
   end

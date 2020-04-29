@@ -27,6 +27,7 @@ gem 'figaro'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'active_model_serializers'
+gem 'carrierwave'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
