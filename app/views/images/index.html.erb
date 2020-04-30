@@ -26,7 +26,7 @@
     <td><%= img.first_name %></td>
     <td><%= img.last_name %></td>
     <td><%= img.category %></td>
-    <td><%=img.date.strftime('%b %d, %Y, %A | %I:%M:%S %p').to_s %></td>
+    <td><%=img.date.strftime('%b %d, %Y, %A | %I:%M:%S %p') %></td>
     <td><%= link_to "Image link", img.image_url, class: 'ui primary button' %></td>
 
 <!--    <td><%#= link_to "Image link", target: :_blank do %>-->
