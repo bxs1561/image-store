@@ -1,7 +1,29 @@
+<!--<body style="background-color:#000000">-->
+<body style="background-color:#333333">
+
+
 <%@images.each do |image| %>
+  <div class="ui small images">
+    <a href = "/all" target="_blank">
+    <img src="<%=image.image %>">
+    </a>
+  </div>
+  <div class="content">
+    <a class="header">Category: <%=image.category %></a>
+  </div>
+
+
+<!--  <div class="ui three stackable cards">-->
+<!--    <div class="card">-->
+<!--      <div class="image">-->
+<!--        <img src="https://i.ytimg.com/vi/xv5_uD2A4YM/hqdefault.jpg?v=5e0ae4f3">-->
+<!--      </div>-->
+<!--    </div>-->
 
 <% end %>
+</body>
 
 
 <%= link_to 'Edit', edit_image_path(@images) %> |
 <%= link_to 'Back', images_path %>
+

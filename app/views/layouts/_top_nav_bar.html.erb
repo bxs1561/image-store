@@ -10,9 +10,21 @@
     </div>
     <div class="right menu">
       <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
+<!--        Signed in as <strong><%#= current_user.name %></strong>!-->
+        <a class="<%= current_page?(images_path) ? "active" : '' %> item" href="<%= images_path %>">
+            Image
+           </a>
+        <a class="<%= current_page?(new_image_path) ? "active" : '' %> item" href="<%= new_image_path %>">
+          Add Image
+        </a>
+        <a class="<%= current_page?(all_path) ? "active" : '' %> item" href="<%= all_path %>">
+          all
+        </a>
         <a class="<%= current_page?(destroy_user_session_path) ? "active" : '' %> item" <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
         </a>
+<!--        <a class="<%#= current_page?(modal_path) ? "active" : '' %> item" href="<%#= modal_path %>">-->
+<!--          modal-->
+<!--        </a>-->
       <% else %>
         <a class="<%= current_page?(new_user_session_path) ? "active" : '' %> item" href="<%= new_user_session_path %>">
           <i class="user circle icon"></i>

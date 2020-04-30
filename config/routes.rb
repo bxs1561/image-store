@@ -37,6 +37,10 @@ Rails.application.routes.draw do
    patch '/images/:id', to:'images#update', as:'store_image'
    delete '/images/:id', to: 'images#destroy'
    root 'homes#home'
-  resources :images
+   get '/all', to: 'images#all'
+   get '/modal', to: 'images#modal'
+
+
+   resources :images
   # resources :store_image
 end

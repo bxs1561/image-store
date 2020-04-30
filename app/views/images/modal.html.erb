@@ -1,0 +1,23 @@
+<%@images.each do |image| %>
+
+  <div class="ui large modal">
+<!--    <div class="header"></div>-->
+    <div class="image content">
+      <img class="image">
+      <!--      <div class="description">-->
+      <img src="<%=image.image %>" width="1030" height="700">
+      <!--      </div>-->
+    </div>
+    <div class="actions">
+      <div class="ui approve button">next</div>
+
+      <%=  link_to "cancel", all_path, class: 'ui button'  %>
+      <% end %>
+    </div>
+  </div>
+
+<script>
+    $('.large.modal')
+        .modal('show')
+    ;
+</script>

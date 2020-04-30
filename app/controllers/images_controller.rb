@@ -28,8 +28,11 @@ class ImagesController < ApplicationController
     end
   end
 
+  # def show
+  #   @images = StoreImage.find(params[:id])
+  # end
   def show
-    @images = StoreImage.find(params[:id])
+    @images = StoreImage.all
   end
 
   def destroy
@@ -38,6 +41,12 @@ class ImagesController < ApplicationController
 
     redirect_to images_path
     # redirect_to root_path
+  end
+  def all
+    @images = StoreImage.all
+  end
+  def modal
+    @images = StoreImage.all
   end
 
   private

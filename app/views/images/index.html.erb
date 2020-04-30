@@ -1,9 +1,12 @@
+
+
 <%= link_to 'New image', new_image_path, class: 'ui primary button' %>
 <br/>
 <br/>
-<!--<div class="ui right floated small primary labeled icon button">-->
-<!--  <i class="user icon"></i> Add User-->
-<!--</div>-->
+<div class="middle">
+    <i class="user icon"></i>owner:  <%=current_user.name %>
+</div>
+
 
 <table class="ui compact celled definition table">
   <tr>
@@ -12,6 +15,10 @@
     <th>category</th>
     <th>Date</th>
     <th>Image</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
+
     <th colspan="3"></th>
   </tr>
   <tbody>
@@ -20,7 +27,7 @@
     <td><%= img.last_name %></td>
     <td><%= img.category %></td>
     <td><%=img.date.strftime('%b %d, %Y, %A | %I:%M:%S %p').to_s %></td>
-    <td><%= link_to "Image link", img.image_url %></td>
+    <td><%= link_to "Image link", img.image_url, class: 'ui primary button' %></td>
 
 <!--    <td><%#= link_to "Image link", target: :_blank do %>-->
         <%#=image_tag(images_path, alt: img.image) %>
@@ -33,12 +40,13 @@
 <!--         width="20"-->
 <!--         height="20">-->
 
-    <td><%= link_to 'Show', image_path(img) %></td>
-    <td><%= link_to 'Edit', edit_image_path(img) %></td>
+    <td><%= link_to 'Show', image_path(img), class: 'ui primary button' %></td>
+    <td><%= link_to 'Edit', edit_image_path(img), class: 'ui primary button' %></td>
     <td><%= link_to 'Destroy', image_path(img),
                     method: :delete,
-                    data: { confirm: 'Are you sure?' } %></td>
+                    data: { confirm: 'Are you sure?' }, class: 'ui primary button' %></td>
   </tr>
 <% end %>
   </tbody>
 </table>
+

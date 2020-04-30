@@ -1,0 +1,14 @@
+<%@images.each do |image| %>
+  <div class="ui card">
+<!--    <a class="image" href="/modal" target="_blank">-->
+    <a class="image" href="/modal">
+    <img src="<%=image.image %>">
+    </a>
+    <div class="content">
+      <a class="header">Name: <%=image.first_name %>  <%=image.last_name %><br/>Category: <%=image.category %></a>
+      </div>
+    </div>
+  </div>
+
+
+<% end %>
